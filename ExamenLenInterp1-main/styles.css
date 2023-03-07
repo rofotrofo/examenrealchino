@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&family=Tilt+Prism&display=swap');
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+.NombrePrincipal{
+    text-align: center;
+    color: white;
+
+}
+.main-header{
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 1px;
+}
+
+.main-header a{
+    text-align: center;
+}
+
+.nav ul{
+    margin: 0;
+}
+
+.nav li{
+    display: inline;
+}
+
+.nav a{
+    display: inline-block;
+    padding: 0.7rem;
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+.nav a:hover{
+    background-color: rgba(255,255,255,0.6);
+}
+
+.acercaimg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+.container{
+    height: 1000px;
+    width: 100%;
+    background-image: url("atlasimg/centenario.jpg");
+}
+
+.quien{
+    font-family: 'Tilt Prism', cursive;
+    color: black;
+    text-align: center;
+    font-size: 3em;
+    background-color: white;
+}
+
+.textgenerico{
+    font-family: 'Gentium Book Basic', serif;
+    background-color: white;
+    font-size: 1.2em;
+}
+
+.textnorm{
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 1em;
+}
+
+.fechaspartidos{
+    text-align: center;
+}
+.fechaspartidos img{
+    height: 100px;
+}
+
+.border{
+    border-bottom: 1px solid black;
+    align-self: center;
+    text-align: center;
+    margin: 20px auto;
+    width: 40%;
+}
+
+.boton{
+    cursor: pointer;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+}
+
+.btn1:hover{
+    background-color: red; /* Green */
+    color: white;
+}
+
+.btn2:hover{
+    background-color: black; /* Green */
+    color: white;
+}
+
+.btn1{
+    background-color: white;
+    color: black;
+    border: 2px solid red;
+}
+
+.btn2{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.main-footer-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: red;
+    justify-content: center;
+}
+
+.main-footer-container ul{
+    flex-grow: 0;
+    text-align: center;
+}
+
+.footer-nav img{
+    height: 50px;
+}
