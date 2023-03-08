@@ -20,14 +20,11 @@ function initiate (){
 
 function reset (){
   colors = generateRandomColors(numCircles);
-  //pick a new random color from array
   pickedColor = pickRandomColor();
-  //change colorDisplay to match pickedColor
   colorDisplay.textContent = pickedColor;
   resetButton.textContent = "Nuevos Colores";
-  messageDisplay.textContent = "";
-  scoremessage.textContent = "";
-  //change colors of circles
+  messageDisplay.textContent = `Score: ${score}`;
+  scoremessage.textContent = `Highscore: ${highscore}`;
   for (var i = 0; i < rectangulos.length; i++){
     if (colors[i]){
       rectangulos[i].style.display = "block";
@@ -65,24 +62,25 @@ function Crear (){
       if (clickedColor === pickedColor) {
         messageDisplay.textContent = "Correcto";
         score++;
+        highscore==score;
         changeColors(clickedColor);
         //await(1000);
-        reset();
+        setTimeout(reset,2000);
+        //reset();
       } else {
         this.style.background = "#232323";
         messageDisplay.textContent = "Te equivocaste";
-        reset();
+        score===0;
+        changeColors(clickedColor);
+        setTimeout(reset,1000);
       }
     });
   }
 }
 
 function changeColors (color){
-  //loop through all circles
   for (var i = 0; i < rectangulos.length; i++) {
-    //change each color to match given color
     rectangulos[i].style.background = color;
-    
   }
 }
 

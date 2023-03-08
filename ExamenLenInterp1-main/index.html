@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script defer src="slides.js"></script>
     <title>Atlas FC</title>
 </head>
 <body>
@@ -51,11 +52,45 @@
             <br class="border">
     </section>
 
-    <section class="partidos">
+    <div class="slideshow-container">
         <h2 class="quien">Equipamientos</h2>
-        
+        <div class="mySlides fade">
+            <div class="numbertext">1/4</div>
+            <img src="atlasimg/localreal.jpg" style="width: 100%;" alt="local">
+            <div class="textfoto quien">Local</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2/4</div>
+            <img src="atlasimg/atlvisit.jpg" style="width: 100%;" alt="local">
+            <div class="textfoto quien">visitante</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3/4</div>
+            <img src="atlasimg/bicampeon.jpg" style="width: 100%;" alt="local">
+            <div class="textfoto quien">Especial</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4/4</div>
+            <img src="atlasimg/atlasnegro.jpg" style="width: 100%;" alt="local">
+            <div class="textfoto quien">Alternativa</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
             
-    </section>
+    </div>
+    
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
 
     <footer class="main-footer">
         <div class="main-footer-container">
@@ -63,7 +98,9 @@
             <ul class="nav footer-nav">
                 <li><a href="https://github.com/rofotrofo" target="_blank"><img class="footer-icon" src="atlasimg/github.png" alt="Github"></a></li>
                 <li><a href="https://www.youtube.com/channel/UC9c4_0fJ7NyFirTGd3or3RA" target="_blank"><img class="footer-icon" src="atlasimg/youtube.png" alt="Youtube"></a></li>
+                <li><a href="https://docs.google.com/document/d/1b_iRdYh89Iq5dgX7sHyi_n1326XcR_Tx_xe6jpp2iG0/edit?usp=sharing" target="_blank"><img class="footer-icon" src="atlasimg/ref.png" alt="referencias"></a></li>
             </ul>
+            <li><a href="https://www.w3schools.com/howto/howto_js_slideshow.asp"></a></li>
         </div>
     </footer>
 </body>
