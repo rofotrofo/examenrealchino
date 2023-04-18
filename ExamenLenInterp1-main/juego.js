@@ -7,10 +7,14 @@ var numCircles       = 3,
     messageDisplay   = document.querySelector("#mensaje"),
     scoremessage     = document.querySelector("#scoremes"),
     h1               = document.querySelector("h1"),
-    resetButton      = document.querySelector("#resetear"),
-    score            = 0,
-    highscore        = 0;
+    resetButton      = document.querySelector("#resetear");
 
+let score            = 0,
+    highscore        = localStorage.getItem("high-score") || 0;
+
+    //scoremessage.textContent = `Score: ${scoremessage}`;
+
+scoredisplay();
 initiate();
 
 function initiate (){
@@ -23,8 +27,8 @@ function reset (){
   pickedColor = pickRandomColor();
   colorDisplay.textContent = pickedColor;
   resetButton.textContent = "Nuevos Colores";
-  messageDisplay.textContent = `Score: ${score}`;
-  scoremessage.textContent = `Highscore: ${highscore}`;
+  //messageDisplay.textContent = `Score: ${score}`;
+  //scoremessage.textContent = `Highscore: ${highscore}`;
   for (var i = 0; i < rectangulos.length; i++){
     if (colors[i]){
       rectangulos[i].style.display = "block";
@@ -38,6 +42,13 @@ function reset (){
 resetButton.addEventListener("click", function() {
   reset();
 })
+
+function scoredisplay(){
+  if(highscore != null && highscore != undefined)
+  {
+    scoremessage.textContent = `High Score: ${highscore}`;
+  }
+}
 
 function Crear (){
   for (var i = 0; i < rectangulos.length; i++) {
@@ -62,7 +73,10 @@ function Crear (){
       if (clickedColor === pickedColor) {
         messageDisplay.textContent = "Correcto";
         score++;
-        highscore==score;
+        highscore = score >= highscore ? score : highscore;
+        localStorage.setItem("high-score",highscore);
+        messageDisplay.textContent = `Score: ${score}`;
+        scoremessage.textContent = `High Score: ${highscore}`;
         changeColors(clickedColor);
         //await(1000);
         setTimeout(reset,2000);
